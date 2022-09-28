@@ -1,14 +1,12 @@
 import { useRouter } from 'next/router'
 import Head from 'next/head'
-import Layout, { siteTitle } from '../components/layout'
 import utilStyles from '../styles/utils.module.css'
 import Home from 'components/Home';
+import Layout, { siteTitle } from 'components/layout';
 
 export default function Homes() {
   const { query } = useRouter();
   const page: number = parseInt(query?.page as string);
-
-  console.log(query, "querydfdfd");
   
 
   return (

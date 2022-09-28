@@ -1,10 +1,7 @@
 import { FunctionComponent } from 'react';
 import { Person } from '../@types';
 import styled from 'styled-components';
-import Loader from './Loader';
 import Link from 'next/link';
-import { useGetPeople } from 'hooks/getPeople';
-import Pagination from './pagination';
 
 export const Container = styled.div`
   box-shadow: #0070f3 0px 1px 2px 0px;
@@ -52,18 +49,14 @@ export const Box = styled.div`
   }
 `;
 
-const Home: FunctionComponent<{ page: number }> = ({ page }) => {
 
-  const { loading, data } = useGetPeople(page);
+const People: FunctionComponent<{ data: [Person] }> = ({ data }) => {
 
   return (
     <>
-      {data?.data.length > 0 && <Pagination count={data?.page?.total} page={page} />}
-
-      {loading && <Loader />}
       <Box>
         {data &&
-          data?.data?.map((person: Person, index: any) => (
+          data?.map((person: Person, index: any) => (
             <Link href={`/details/${person.name}`} key={index}>
               <Container>
                 <Title>Name: {person.name}</Title>
@@ -87,4 +80,4 @@ const Home: FunctionComponent<{ page: number }> = ({ page }) => {
   );
 };
 
-export default Home;
+export default People;

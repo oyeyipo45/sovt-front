@@ -5,7 +5,7 @@ import utilStyles from '../styles/utils.module.css';
 import Link from 'next/link';
 
 const name = 'SWAPI-SOVTECH'
-export const siteTitle = 'Next.js Sample Website'
+export const siteTitle = 'Sovtevh Test'
 
 export default function Layout({ children }) {
   return (
@@ -28,7 +28,6 @@ export default function Layout({ children }) {
             <Image priority src='/images/Star-Wars-Logo.jpeg' height={114} width={194} alt={name} />
           </a>
         </Link>
-        <h1 className={utilStyles.heading2Xl}>{name}</h1>
       </header>
       <main>{children}</main>
     </div>

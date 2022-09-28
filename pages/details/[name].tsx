@@ -1,7 +1,7 @@
 import { FunctionComponent } from 'react'
-import Layout from '../../components/layout'
 import { Person } from '@types'
 import Details from 'components/Details'
+import Layout from 'components/layout'
 
 const PersonDetail : FunctionComponent<{data: Person}> = ({ data }) => {
   return (

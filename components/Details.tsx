@@ -7,27 +7,29 @@ import Link from 'next/link';
 import { useRouter } from 'next/router';
 
 export const Container = styled.div`
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px 0px;
+  box-shadow: #0070f3 0px 1px 2px 0px;
   padding: 1.5rem 1rem;
   margin-top: 2rem;
   width: 13rem;
   border-radius: 0.5rem;
   background-color: white;
-  @media only screen and (max-width: 600px) {
+  @media screen and (max-width: 600px) {
     padding: 1.5rem 0.5rem;
     margin-top: 1rem;
+    margin-right: auto;
+    margin-left: auto;
   }
 `;
 
 export const Title = styled.h1`
-  font-size: 18px;
+  font-size: 16px;
   margin: 0;
   margin-bottom: 8px;
-  color: #b26c10;
+  color: #black;
   a {
-    color: #b26c10;
+    color: #black;
   }
-  @media only screen and (max-width: 600px) {
+  @media screen and (max-width: 600px) {
     font-size: 16px;
   }
 `;
@@ -42,6 +44,24 @@ const Button = styled.button`
   padding: 0.25em 1em;
   border: 2px solid palevioletred;
   border-radius: 3px;
+`;
+
+export const Box = styled.div`
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-column-gap: 1.5rem;
+
+  @media screen and (max-width: 750px) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 1.5rem;
+  }
+
+  @media screen and (max-width: 500px) {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-column-gap: 1.5rem;
+  }
 `;
 
 const Details = () => {
