@@ -13,5 +13,5 @@ A GraphQL API that wraps the Star Wars API (https://swapi.dev/)
 -  Navigate to https://localhost:3000 on your browser
 
 #### How to test live application
--  Navigate to https://sovt-front-8c85-66ffx6jwq-oyeyipo45.vercel.app/ on your browser
+-  Navigate to https://sovt-front-8c85-oyeyipo45.vercel.app on your browser
 
