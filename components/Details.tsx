@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import Loader from './Loader';
-import { Person } from '../@types';
 import styled from 'styled-components';
 import { useGetPerson } from 'hooks/getPerson';
 import Link from 'next/link';

@@ -1,17 +1,16 @@
 import Head from 'next/head';
 import Image from 'next/image';
 import styles from '../styles/layout.module.css';
-import utilStyles from '../styles/utils.module.css';
 import Link from 'next/link';
 
-const name = 'SWAPI-SOVTECH'
+const name = 'SOVTECH-TEST'
 export const siteTitle = 'Sovtech Test'
 
 export default function Layout({ children }) {
   return (
     <div className={styles.container}>
       <Head>
-        <link rel='icon' href='/favicon.ico' />
+        <link rel='icon' href='/' />
         <meta name='description' content='Learn how to build a personal website using Next.js' />
         <meta
           property='og:image'
