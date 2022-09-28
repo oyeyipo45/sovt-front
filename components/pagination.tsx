@@ -42,7 +42,7 @@ const Button = styled.button`
   border-radius: 3px;
 `;
 
-const Pagination: FunctionComponent<PaginationProps> = ({ page, count }) => {
+const Pagination = ({ page, count }) => {
   const perPage = 10;
   const pageCount: number = Math.ceil(count / perPage);
 
