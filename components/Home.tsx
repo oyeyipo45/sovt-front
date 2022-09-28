@@ -9,9 +9,11 @@ const Home: FunctionComponent<{ page: number }> = ({ page }) => {
 
   const people = data?.data;
 
+  const total = data?.page?.total;
+
   return (
     <>
-      {people?.length > 0 && <Pagination count={data?.page?.total} page={page} />}
+      {people?.length > 0 && <Pagination count={total} page={page} />}
 
       {loading && <Loader />}
       {data && <People data={people} />}
