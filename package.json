@@ -1,0 +1,26 @@
+{
+  "name": "sovt-frontend",
+  "version": "0.1.0",
+  "private": true,
+  "aauthor": "damilola oyeyipo",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
+  },
+  "dependencies": {
+    "@apollo/client": "^3.3.20",
+    "@types/react": "^17.0.11",
+    "graphql": "^15.5.1",
+    "next": "^11.0.0",
+    "react": "17.0.2",
+    "react-dom": "17.0.2",
+    "styled-components": "^5.3.0"
+  },
+  "devDependencies": {
+    "typescript": "^4.3.4"
+  },
+  "resolutions": {
+    "styled-components": "^5"
+  }
+}
