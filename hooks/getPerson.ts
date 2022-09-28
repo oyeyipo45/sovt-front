@@ -9,16 +9,6 @@ const GET_PERSON = gql`
         gender
         height
         homeworld
-        hair_color
-        skin_color
-        eye_color
-        birth_year
-        films
-        vehicles
-        starships
-        created
-        edited
-        url
       }
       page {
         total
@@ -31,7 +21,6 @@ const GET_PERSON = gql`
 
 export const useGetPerson = (personName: any) => {
   let { loading, data } = useQuery<any, any>(GET_PERSON, { variables: { search: personName } });
-  console.log(data, 'data');
 
   return {
     loading,

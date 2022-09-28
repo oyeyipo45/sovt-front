@@ -8,3 +8,9 @@
   font-size: 1.2rem;
   line-height: 1.5;
 }
+
+.bold {
+  font-size: .9rem;
+  line-height: 1.1;
+  font-weight: 600;
+}

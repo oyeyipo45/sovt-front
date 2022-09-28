@@ -5,7 +5,7 @@ import utilStyles from '../styles/utils.module.css';
 import Link from 'next/link';
 
 const name = 'SWAPI-SOVTECH'
-export const siteTitle = 'Sovtevh Test'
+export const siteTitle = 'Sovtech Test'
 
 export default function Layout({ children }) {
   return (
@@ -23,7 +23,7 @@ export default function Layout({ children }) {
         <meta name='twitter:card' content='summary_large_image' />
       </Head>
       <header className={styles.header}>
-        <Link href='/'>
+        <Link href='/?page=1'>
           <a>
             <Image priority src='/images/Star-Wars-Logo.jpeg' height={114} width={194} alt={name} />
           </a>

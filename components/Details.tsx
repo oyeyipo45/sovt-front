@@ -5,6 +5,7 @@ import styled from 'styled-components';
 import { useGetPerson } from 'hooks/getPerson';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
+import People from './People';
 
 export const Container = styled.div`
   box-shadow: #0070f3 0px 1px 2px 0px;
@@ -35,14 +36,12 @@ export const Title = styled.h1`
 `;
 
 const Button = styled.button`
-  /* Adapt the colors based on primary prop */
-  background: ${(props) => 'palevioletred'};
   color: ${(props) => 'white'};
-
   font-size: 1em;
   margin: 1em;
   padding: 0.25em 1em;
-  border: 2px solid palevioletred;
+  border: 2px solid #0070f3;
+  background: ${(props) => '0070f3'};
   border-radius: 3px;
 `;
 
@@ -65,16 +64,13 @@ export const Box = styled.div`
 `;
 
 const Details = () => {
-
   const router = useRouter();
-    
-  const { name } = router.query;
 
-  const personName = name;
+  const { name } = router.query;
 
   const [person, setPerson] = useState([]);
 
-  const { loading, data } = useGetPerson(personName);
+  const { loading, data } = useGetPerson(name);
 
   useEffect(() => {
     if (data) {
@@ -84,35 +80,17 @@ const Details = () => {
 
   return (
     <>
-      {data?.length > 0 && (
-        <>
-          <Button>
-            <Link href={'/?page=1'}>Go To Home</Link>
-          </Button>
-          <div>Details</div>
-        </>
-      )}
-      {loading && <Loader />}
-      {data &&
-        data?.map((person: Person, index: any) => (
-          <Link href={`/details/${person.name}`} key={index}>
-            <Container>
-              <Title>Name: {person.name}</Title>
-              <Title>
-                Gender: <span>{person.gender}</span>
-              </Title>
-              <Title>
-                Mass: <span>{person.mass}</span>
-              </Title>
-              <Title>
-                Height: <span>{person.height}</span>
-              </Title>
-              <Title>
-                Mass: <span>{person.mass}</span>
-              </Title>
-            </Container>
-          </Link>
-        ))}
+      <>
+        {data?.length > 0 && (
+          <>
+            <Button>
+              <Link href={'/?page=1'}>Go To Home</Link>
+            </Button>
+          </>
+        )}
+        {loading && <Loader />}
+        {data && <People data={data} />}
+      </>
     </>
   );
 };

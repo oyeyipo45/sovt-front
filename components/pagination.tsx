@@ -3,6 +3,7 @@ import { FunctionComponent } from 'react';
 import styled from 'styled-components';
 import Link from 'next/link';
 import { PaginationProps } from '../@types';
+import utilStyles from '../styles/utils.module.css'
 
 const PaginationContainer = styled.div`
   text-align: center;
@@ -18,6 +19,7 @@ const PaginationContainer = styled.div`
     margin: 0;
     padding: 15px 30px;
     border-right: 2px solid #0070f3;
+    border-left: 2px solid #0070f3;
     &:last-child {
       border-right: 0;
     }
@@ -50,9 +52,11 @@ const Pagination: FunctionComponent<PaginationProps> = ({ page, count }) => {
         <Button disabled={page <= 1}>Prev</Button>
       </Link>
       <p>
-        Page {page} of {pageCount}
+        Page <span className={utilStyles.bold}>{page}</span> of <span className={utilStyles.bold}>{pageCount}</span>
       </p>
-      <p>{count} People Total</p>
+      <p>
+        Total of <span className={utilStyles.bold}>{count}</span> People
+      </p>
       <Link href={`/?page=${page + 1}`}>
         <Button disabled={page >= pageCount}>Next</Button>
       </Link>
