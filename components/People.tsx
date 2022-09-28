@@ -10,7 +10,8 @@ export const Container = styled.div`
   width: 13rem;
   border-radius: 0.5rem;
   background-color: white;
-  @media screen and (max-width: 600px) {
+  cursor: pointer;
+   @media screen and (max-width: 600px) {
     padding: 1.5rem 0.5rem;
     margin-top: 1rem;
     margin-right: auto;

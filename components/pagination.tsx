@@ -38,8 +38,9 @@ const Button = styled.button`
   margin: 1em;
   padding: 0.25em 1em;
   border: 2px solid #0070f3;
-  background-color : #0070f3;
+  background-color: #0070f3;
   border-radius: 3px;
+  cursor: pointer;
 `;
 
 const Pagination: FunctionComponent<PaginationProps> = ({ page, count }) => {

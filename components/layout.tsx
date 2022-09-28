@@ -10,7 +10,7 @@ export default function Layout({ children }) {
   return (
     <div className={styles.container}>
       <Head>
-        <link rel='icon' href='/' />
+        <link rel='icon' href='/images/Star-Wars-Logo.jpeg' />
         <meta name='description' content='Learn how to build a personal website using Next.js' />
         <meta
           property='og:image'

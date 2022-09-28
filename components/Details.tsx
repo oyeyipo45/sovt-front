@@ -83,7 +83,7 @@ const Details = () => {
         {data?.length > 0 && (
           <>
             <Button>
-              <Link href={'/?page=1'}>Go To Home</Link>
+              <Link href={'/?page=1'} className='link'>Go To Home</Link>
             </Button>
           </>
         )}
