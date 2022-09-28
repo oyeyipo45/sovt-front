@@ -2,7 +2,8 @@
   "name": "sovt-frontend",
   "version": "0.1.0",
   "private": true,
-  "aauthor": "damilola oyeyipo",
+  "author": "damilola oyeyipo",
+  "license": "MIT",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
