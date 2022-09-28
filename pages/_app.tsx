@@ -17,9 +17,10 @@ export const client = new ApolloClient({
 });
 
 export default function App({ Component, pageProps }: AppProps) {
+  const AnyComponent = Component as any;
   return (
     <ApolloProvider client={client}>
-      <Component {...pageProps} />
+      <AnyComponent {...pageProps} />
     </ApolloProvider>
   );
 };
