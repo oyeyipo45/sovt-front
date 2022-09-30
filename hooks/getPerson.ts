@@ -20,10 +20,11 @@ const GET_PERSON = gql`
 `;
 
 export const useGetPerson = (personName: any) => {
-  let { loading, data } = useQuery<any, any>(GET_PERSON, { variables: { search: personName } });
+  let { loading, data , error} = useQuery<any, any>(GET_PERSON, { variables: { search: personName } });
 
   return {
     loading,
     data: data?.getPerson?.data,
+    error
   };
 };

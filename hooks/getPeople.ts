@@ -20,7 +20,7 @@ const GET_PEOPLE = gql`
 `;
 
 export const useGetPeople = (page: any) => {
-  let { loading, data } = useQuery<any, any>(GET_PEOPLE, { variables: { filter: { page } } });
+  let { loading, data, error } = useQuery<any, any>(GET_PEOPLE, { variables: { filter: { page } } });
 
-  return { loading, data: data?.getPeople };
+  return { loading, data: data?.getPeople, error };
 };

@@ -5,7 +5,7 @@ import People from './People';
 import Pagination from './Pagination';
 
 const Home: FunctionComponent<{ page: number }> = ({ page }) => {
-  const { loading, data } = useGetPeople(page);
+  const { loading, data, error } = useGetPeople(page);
 
   const people = data?.data;
 
@@ -13,9 +13,9 @@ const Home: FunctionComponent<{ page: number }> = ({ page }) => {
 
   return (
     <>
-      {people?.length > 0 && <Pagination count={total} page={page} />}
-
       {loading && <Loader />}
+      {people?.length > 0 && <Pagination count={total} page={page} />}
+      {error && <h1>An error occured</h1>}
       {data && <People data={people} />}
     </>
   );

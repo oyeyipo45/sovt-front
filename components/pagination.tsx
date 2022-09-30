@@ -11,13 +11,13 @@ const PaginationContainer = styled.div`
   align-items: center;
   justify-content: center;
   align-content: center;
-  margin: 2rem 0;
+  margin: .5rem 0;
   border: 2px solid #0070f3;
   border-radius: 10px;
   font-size: 14px;
   & > * {
     margin: 0;
-    padding: 15px 30px;
+    padding: 15px 20px;
     border-right: 2px solid #0070f3;
     border-left: 2px solid #0070f3;
     &:last-child {

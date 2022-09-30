@@ -1,12 +1,13 @@
 .container {
-  max-width: 45rem;
+  max-width: 55rem;
   padding: 0 1rem;
-  margin: 3rem auto 6rem;
+  margin: 3rem auto 5rem;
   text-align: center;
 }
 
 .header {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  justify-content: space-around;
   align-items: center;
 }

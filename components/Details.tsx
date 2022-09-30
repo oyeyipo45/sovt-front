@@ -69,7 +69,7 @@ const Details = () => {
 
   const [person, setPerson] = useState([]);
 
-  const { loading, data } = useGetPerson(name);
+  const { loading, data , error} = useGetPerson(name);
 
   useEffect(() => {
     if (data) {
@@ -87,6 +87,7 @@ const Details = () => {
             </Button>
           </>
         )}
+        {error && <h1>An Error Occured</h1>}
         {loading && <Loader />}
         {data && <People data={data} />}
       </>
